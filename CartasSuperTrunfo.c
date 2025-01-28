@@ -2,7 +2,6 @@
 
 int main() {
 
-    char codigo[4];
     int populacao, populacao2;
     float area, area2;
     float pib, pib2;
