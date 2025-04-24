@@ -1,23 +1,15 @@
 #include <stdio.h>
 
 int main() {
-    // 🔹 Nível Novato - Declaração de variáveis básicas
     char estado1, estado2;
     char codigo1[4], codigo2[4];
     char nomeCidade1[50], nomeCidade2[50];
-    
-    // 🟥 População como unsigned long int para grandes números (Nível Mestre)
     unsigned long int populacao1, populacao2;
-    
     float area1, area2;
-    float pib1, pib2; // PIB em bilhões
+    float pib1, pib2; 
     int pontosTuristicos1, pontosTuristicos2;
-
-    // 🟨 Nível Aventureiro - Variáveis adicionais
     float densidade1, densidade2;
     float pibPerCapita1, pibPerCapita2;
-
-    // 🟥 Nível Mestre - Super Poder
     float superPoder1, superPoder2;
 
     // Entrada dos dados da Carta 1
@@ -54,18 +46,18 @@ int main() {
     printf("Número de Pontos Turísticos: ");
     scanf("%d", &pontosTuristicos2);
 
-    // 🟨 Cálculo de densidade e PIB per capita
+    // Densidade e PIB
     densidade1 = populacao1 / area1;
     densidade2 = populacao2 / area2;
 
     pibPerCapita1 = (pib1 * 1000000000) / populacao1;
     pibPerCapita2 = (pib2 * 1000000000) / populacao2;
 
-    // 🟥 Cálculo do Super Poder
+    // Super Poder
     superPoder1 = populacao1 + area1 + (pib1 * 1000000000) + pontosTuristicos1 + pibPerCapita1 + (1 / densidade1);
     superPoder2 = populacao2 + area2 + (pib2 * 1000000000) + pontosTuristicos2 + pibPerCapita2 + (1 / densidade2);
 
-    // Exibição dos dados e cálculos - Carta 1
+    // Exibição da carta 1
     printf("\nCarta 1:\n");
     printf("Estado: %c\n", estado1);
     printf("Código: %s\n", codigo1);
@@ -77,7 +69,7 @@ int main() {
     printf("Densidade Populacional: %.2f hab/km²\n", densidade1);
     printf("PIB per Capita: %.2f reais\n", pibPerCapita1);
 
-    // Exibição dos dados e cálculos - Carta 2
+    // Exibição da carta 2
     printf("\nCarta 2:\n");
     printf("Estado: %c\n", estado2);
     printf("Código: %s\n", codigo2);
@@ -89,7 +81,7 @@ int main() {
     printf("Densidade Populacional: %.2f hab/km²\n", densidade2);
     printf("PIB per Capita: %.2f reais\n", pibPerCapita2);
 
-    // 🟥 Comparações entre cartas
+    // Comparações entre cartas
     printf("\nComparação de Cartas:\n");
     printf("População: Carta 1 venceu (%d)\n", populacao1 > populacao2);
     printf("Área: Carta 1 venceu (%d)\n", area1 > area2);
